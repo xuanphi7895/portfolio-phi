@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="css/style.css"></link>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="container hero fade-up">
+    <div>
+      <h1>Hi, I'm <span style="color:var(--primary)">Phi</span></h1>
+      <p class="muted">Web Developer • C# | Angular | PostgreSQL | JavaScript</p>
+      <!-- <p>You can call me Sea</p> -->
+      <p class="muted" style="margin-top:24px; max-width:520px;">
+        Principal .NET Full‑Stack Engineer building fast, scalable, and beautiful web applications.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">View Projects</button>
+        <button class="btn btn-outline">Contact Me</button>
+      </div>
+    </div>
+    <div class="avatar"></div>
+  </section>
+
+  <!-- About -->
+  <section class="container fade-up">
+    <h2>About Me</h2>
+    <p class="muted">
+      Hello! I'm <strong>Tran Xuan Phi</strong>, a passionate developer who enjoys building modern,
+      scalable and high-performance web applications. I specialize in .NET, Angular, and modern web architectures. 
+      I focus on clean code, performance, and user‑centered design in global professional environments.
+  </p>
+  </section>
+
+  <!-- Projects -->
+  <section class="container fade-up">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project One</h3>
+        <p class="muted">Short description of the project and the value it delivers.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p class="muted">Short description of the project and the value it delivers.</p>
+      </div>
+      <div class="card">
+        <h3>Project Three</h3>
+        <p class="muted">Short description of the project and the value it delivers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="container fade-up">
+    <h2>Get in Touch</h2>
+    <div class="contact-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Your Name. All rights reserved.
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

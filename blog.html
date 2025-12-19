@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tran Xuan Phi - Portfolio</title>
+  <style>
+    :root {
+      --green: #4CAF50;
+      --green-light: #e8f5e9;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #d1fae5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #f9fafb;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      box-shadow: 0 10px 40px rgba(0,0,0,.08);
+    }
+
+    /* HEADER */
+    .header {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 32px;
+      padding: 32px;
+      background: var(--green-light);
+      border-bottom: 6px solid var(--green);
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #c8e6c9;
+      overflow: hidden;
+      border: 6px solid #b7e4c7;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      color: var(--green);
+    }
+
+    .role {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 8px 24px;
+      font-size: .95rem;
+    }
+
+    /* LAYOUT */
+    .content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 32px;
+      padding: 32px;
+    }
+
+    section { margin-bottom: 32px; }
+
+    h2 {
+      color: var(--green);
+      font-size: 1.25rem;
+      border-bottom: 3px solid var(--green);
+      display: inline-block;
+      padding-bottom: 4px;
+      margin-bottom: 16px;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      border-left: 3px solid var(--border);
+      padding-left: 24px;
+    }
+
+    .item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .item::before {
+      content: "+";
+      position: absolute;
+      left: -36px;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--green);
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: bold;
+    }
+
+    .date {
+      font-size: .9rem;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .company {
+      font-weight: 700;
+      margin: 4px 0;
+    }
+
+    .project {
+      color: var(--green);
+      font-size: .95rem;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    /* SIDEBAR */
+    .box {
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .tag {
+      background: #ecfdf5;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: .85rem;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .header, .content { grid-template-columns: 1fr; }
+      .avatar { margin: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="avatar">
+      <!-- Replace with your image -->
+      <img src="https://lh3.googleusercontent.com/a/ACg8ocIvbZV6hps7ClKqktvIj4Wobkc49D5IIx8vX4gZepLBZLAQ7PRD=s360-c-no" alt="Tran Xuan Phi" />
+    </div>
+    <div>
+      <h1>Tran Xuan Phi</h1>
+      <div class="role">.NET Engineer</div>
+      <div class="info">
+        <div>📅 August 07, 1995</div>
+        <div>👤 Male</div>
+        <div>📞 0379731767</div>
+        <div>✉️ xuanphi7895@gmail.com</div>
+        <div>📍 Phu An, Phu Vang, Thua Thien Hue</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- LEFT -->
+    <div>
+      <section>
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="item">
+            <div class="date">Sep 2013 – May 2017</div>
+            <div class="company">Hue University of Education</div>
+            <div class="muted">Major: Information Technology – Graduate: Good</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+        <div class="timeline">
+          <div class="item">
+            <div class="date">Apr 2023 – Present</div>
+            <div class="company">ENLAB Software – Software Engineer</div>
+            <div class="project">WooSender</div>
+            <ul>
+              <li>Develop features based on client requirements.</li>
+              <li>Optimize performance and scalability.</li>
+              <li>Fix bugs and maintain system stability.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="date">Oct 2022 – Mar 2023</div>
+            <div class="company">CMC Global – Fullstack Developer</div>
+            <ul>
+              <li>Analyze requirements and maintain codebase.</li>
+              <li>Provide training for team members.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- RIGHT -->
+    <aside>
+      <section class="box">
+        <h2>Skills</h2>
+        <div class="tag">C#, JavaScript</div>
+        <div class="tag">.NET Core, ASP.NET MVC</div>
+        <div class="tag">Angular 10+, jQuery</div>
+        <div class="tag">SQL Server, PostgreSQL, MySQL</div>
+        <div class="tag">AWS (S3, CloudWatch)</div>
+        <div class="tag">Git, GitLab</div>
+      </section>
+
+      <section class="box">
+        <h2>Languages</h2>
+        <div class="tag">English – Intermediate</div>
+      </section>
+
+      <section class="box">
+        <h2>Honors</h2>
+        <div class="tag">Rising Star Q3 2022</div>
+        <div class="tag">Team Trainer</div>
+      </section>
+    </aside>
+
+  </main>
+</div>
+
+</body>
+</html>
